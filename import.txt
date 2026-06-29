@@ -1,0 +1,62 @@
+USE [internetshopDB]
+GO
+
+-- 1. Полностью очищаем базу от старых попыток
+DELETE FROM [dbo].[review];
+DELETE FROM [dbo].[order_item];
+DELETE FROM [dbo].[order];
+DELETE FROM [dbo].[product];
+DELETE FROM [dbo].[user];
+GO
+
+-- 2. Сбрасываем счетчики ID (чтобы они снова начались с 1)
+DBCC CHECKIDENT ('[dbo].[review]', RESEED, 0);
+DBCC CHECKIDENT ('[dbo].[order_item]', RESEED, 0);
+DBCC CHECKIDENT ('[dbo].[order]', RESEED, 0);
+DBCC CHECKIDENT ('[dbo].[product]', RESEED, 0);
+DBCC CHECKIDENT ('[dbo].[user]', RESEED, 0);
+GO
+
+-- 3. Добавляем пользователей
+INSERT INTO [dbo].[user] ([login], [password], [familiya], [imya], [otchestvo], [role]) VALUES 
+(N'admin', N'admin', N'Пресняков', N'Артём', N'Станиславович', N'admin'),
+(N'client', N'client', N'Кудрявцев', N'Дмитрий', N'Игоревич', N'client'),
+(N'ivanov', N'1234', N'Иванов', N'Иван', N'Иванович', N'client'),
+(N'petrov', N'1234', N'Петров', N'Петр', N'Петрович', N'client');
+GO
+
+-- 4. Добавляем 10 реальных товаров
+INSERT INTO [dbo].[product] ([title], [price], [stock_quantity], [category_name]) VALUES 
+(N'Смартфон Samsung Galaxy S23', 75000, 15, N'Смартфоны'),
+(N'Ноутбук Apple MacBook Air M2', 120000, 5, N'Ноутбуки'),
+(N'Наушники Sony WH-1000XM5', 30000, 20, N'Аудио'),
+(N'Умные часы Apple Watch Series 8', 35000, 12, N'Аксессуары'),
+(N'Планшет iPad Pro 11', 85000, 8, N'Планшеты'),
+(N'Игровая консоль PlayStation 5', 55000, 10, N'Игры'),
+(N'Телевизор LG OLED55', 105000, 4, N'Телевизоры'),
+(N'Беспроводная мышь Logitech MX Master 3S', 9000, 25, N'Компьютеры'),
+(N'Механическая клавиатура Keychron K2', 11000, 18, N'Компьютеры'),
+(N'Внешний жесткий диск WD 2TB', 6000, 30, N'Аксессуары');
+GO
+
+-- 5. Добавляем заказы (Используем формат ГГГГММДД - он не вызывает ошибок)
+INSERT INTO [dbo].[order] ([user_id], [order_date], [status], [total_amount]) VALUES 
+(2, '20260625', N'Доставлен', 75000),
+(3, '20260628', N'Отправлен', 120000),
+(4, GETDATE(), N'В обработке', 39000);
+GO
+
+-- 6. Добавляем позиции внутри заказов
+INSERT INTO [dbo].[order_item] ([order_id], [product_id], [quantity], [price_at_purchase]) VALUES 
+(1, 1, 1, 75000),
+(2, 2, 1, 120000),
+(3, 8, 1, 9000),
+(3, 3, 1, 30000);
+GO
+
+-- 7. Добавляем отзывы (Формат ГГГГММДД)
+INSERT INTO [dbo].[review] ([product_id], [user_id], [review_text], [created_at]) VALUES 
+(1, 2, N'Отличный телефон, камера просто супер! Рекомендую.', '20260626'),
+(2, 3, N'Ноутбук очень быстрый, заряд держит весь рабочий день.', '20260629'),
+(6, 4, N'Мечтал об этой консоли, всё работает идеально.', GETDATE());
+GO

@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="internetshopDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="order">
+    <Key>
+      <PropertyRef Name="order_id" />
+    </Key>
+    <Property Name="order_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="order_date" Type="DateTime" Precision="0" />
+    <Property Name="status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="total_amount" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="order_item" Relationship="Self.FK__order_ite__order__5CD6CB2B" FromRole="order" ToRole="order_item" />
+    <NavigationProperty Name="user" Relationship="Self.FK__orders__user_id__571DF1D5" FromRole="order" ToRole="user" />
+  </EntityType>
+  <EntityType Name="order_item">
+    <Key>
+      <PropertyRef Name="order_item_id" />
+    </Key>
+    <Property Name="order_item_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="order_id" Type="Int32" />
+    <Property Name="product_id" Type="Int32" />
+    <Property Name="quantity" Type="Int32" Nullable="false" />
+    <Property Name="price_at_purchase" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="order" Relationship="Self.FK__order_ite__order__5CD6CB2B" FromRole="order_item" ToRole="order" />
+    <NavigationProperty Name="product" Relationship="Self.FK__order_ite__produ__5DCAEF64" FromRole="order_item" ToRole="product" />
+  </EntityType>
+  <EntityType Name="product">
+    <Key>
+      <PropertyRef Name="product_id" />
+    </Key>
+    <Property Name="product_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="title" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="price" Type="Int32" Nullable="false" />
+    <Property Name="stock_quantity" Type="Int32" Nullable="false" />
+    <Property Name="category_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="order_item" Relationship="Self.FK__order_ite__produ__5DCAEF64" FromRole="product" ToRole="order_item" />
+    <NavigationProperty Name="review" Relationship="Self.FK__reviews__product__60A75C0F" FromRole="product" ToRole="review" />
+  </EntityType>
+  <EntityType Name="review">
+    <Key>
+      <PropertyRef Name="review_id" />
+    </Key>
+    <Property Name="review_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_id" Type="Int32" />
+    <Property Name="user_id" Type="Int32" />
+    <Property Name="review_text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="created_at" Type="DateTime" Precision="0" />
+    <NavigationProperty Name="product" Relationship="Self.FK__reviews__product__60A75C0F" FromRole="review" ToRole="product" />
+    <NavigationProperty Name="user" Relationship="Self.FK__reviews__user_id__619B8048" FromRole="review" ToRole="user" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="user">
+    <Key>
+      <PropertyRef Name="user_id" />
+    </Key>
+    <Property Name="user_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="login" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="password" Type="String" MaxLength="255" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="familiya" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="imya" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="otchestvo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="role" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="order" Relationship="Self.FK__orders__user_id__571DF1D5" FromRole="user" ToRole="order" />
+    <NavigationProperty Name="review" Relationship="Self.FK__reviews__user_id__619B8048" FromRole="user" ToRole="review" />
+  </EntityType>
+  <Association Name="FK__order_ite__order__5CD6CB2B">
+    <End Role="order" Type="Self.order" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="order_item" Type="Self.order_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="order">
+        <PropertyRef Name="order_id" />
+      </Principal>
+      <Dependent Role="order_item">
+        <PropertyRef Name="order_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__orders__user_id__571DF1D5">
+    <End Role="user" Type="Self.user" Multiplicity="0..1" />
+    <End Role="order" Type="Self.order" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="order">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__order_ite__produ__5DCAEF64">
+    <End Role="product" Type="Self.product" Multiplicity="0..1" />
+    <End Role="order_item" Type="Self.order_item" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="order_item">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__reviews__product__60A75C0F">
+    <End Role="product" Type="Self.product" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="review" Type="Self.review" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="product">
+        <PropertyRef Name="product_id" />
+      </Principal>
+      <Dependent Role="review">
+        <PropertyRef Name="product_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__reviews__user_id__619B8048">
+    <End Role="user" Type="Self.user" Multiplicity="0..1" />
+    <End Role="review" Type="Self.review" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="user">
+        <PropertyRef Name="user_id" />
+      </Principal>
+      <Dependent Role="review">
+        <PropertyRef Name="user_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="internetshopDBEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="order" EntityType="Self.order" />
+    <EntitySet Name="order_item" EntityType="Self.order_item" />
+    <EntitySet Name="product" EntityType="Self.product" />
+    <EntitySet Name="review" EntityType="Self.review" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="user" EntityType="Self.user" />
+    <AssociationSet Name="FK__order_ite__order__5CD6CB2B" Association="Self.FK__order_ite__order__5CD6CB2B">
+      <End Role="order" EntitySet="order" />
+      <End Role="order_item" EntitySet="order_item" />
+    </AssociationSet>
+    <AssociationSet Name="FK__orders__user_id__571DF1D5" Association="Self.FK__orders__user_id__571DF1D5">
+      <End Role="user" EntitySet="user" />
+      <End Role="order" EntitySet="order" />
+    </AssociationSet>
+    <AssociationSet Name="FK__order_ite__produ__5DCAEF64" Association="Self.FK__order_ite__produ__5DCAEF64">
+      <End Role="product" EntitySet="product" />
+      <End Role="order_item" EntitySet="order_item" />
+    </AssociationSet>
+    <AssociationSet Name="FK__reviews__product__60A75C0F" Association="Self.FK__reviews__product__60A75C0F">
+      <End Role="product" EntitySet="product" />
+      <End Role="review" EntitySet="review" />
+    </AssociationSet>
+    <AssociationSet Name="FK__reviews__user_id__619B8048" Association="Self.FK__reviews__user_id__619B8048">
+      <End Role="user" EntitySet="user" />
+      <End Role="review" EntitySet="review" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

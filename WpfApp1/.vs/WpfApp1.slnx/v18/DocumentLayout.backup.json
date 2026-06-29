@@ -1,0 +1,135 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\LENOVO\\Desktop\\vs\\WpfApp1\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{04F1EF38-72BA-4582-A30F-393FE570073B}|WpfApp1\\WpfApp1.csproj|c:\\users\\lenovo\\desktop\\vs\\wpfapp1\\wpfapp1\\win\\klient.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04F1EF38-72BA-4582-A30F-393FE570073B}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\win\\klient.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04F1EF38-72BA-4582-A30F-393FE570073B}|WpfApp1\\WpfApp1.csproj|c:\\users\\lenovo\\desktop\\vs\\wpfapp1\\wpfapp1\\win\\klient.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{04F1EF38-72BA-4582-A30F-393FE570073B}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\win\\klient.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04F1EF38-72BA-4582-A30F-393FE570073B}|WpfApp1\\WpfApp1.csproj|c:\\users\\lenovo\\desktop\\vs\\wpfapp1\\wpfapp1\\win\\administrator.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04F1EF38-72BA-4582-A30F-393FE570073B}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\win\\administrator.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04F1EF38-72BA-4582-A30F-393FE570073B}|WpfApp1\\WpfApp1.csproj|c:\\users\\lenovo\\desktop\\vs\\wpfapp1\\wpfapp1\\win\\administrator.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{04F1EF38-72BA-4582-A30F-393FE570073B}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\win\\administrator.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04F1EF38-72BA-4582-A30F-393FE570073B}|WpfApp1\\WpfApp1.csproj|c:\\users\\lenovo\\desktop\\vs\\wpfapp1\\wpfapp1\\win\\avtorizaciya.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{04F1EF38-72BA-4582-A30F-393FE570073B}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\win\\avtorizaciya.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04F1EF38-72BA-4582-A30F-393FE570073B}|WpfApp1\\WpfApp1.csproj|c:\\users\\lenovo\\desktop\\vs\\wpfapp1\\wpfapp1\\win\\avtorizaciya.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{04F1EF38-72BA-4582-A30F-393FE570073B}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\win\\avtorizaciya.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{04F1EF38-72BA-4582-A30F-393FE570073B}|WpfApp1\\WpfApp1.csproj|c:\\users\\lenovo\\desktop\\vs\\wpfapp1\\wpfapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{04F1EF38-72BA-4582-A30F-393FE570073B}|WpfApp1\\WpfApp1.csproj|solutionrelative:wpfapp1\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Win\\Klient.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\vs\\WpfApp1\\WpfApp1\\win\\Klient.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\win\\Klient.xaml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\vs\\WpfApp1\\WpfApp1\\win\\Klient.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\win\\Klient.xaml.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwG8AAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T20:42:45.847Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Klient.xaml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\vs\\WpfApp1\\WpfApp1\\Win\\Klient.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Win\\Klient.xaml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\vs\\WpfApp1\\WpfApp1\\Win\\Klient.xaml",
+              "RelativeToolTip": "WpfApp1\\Win\\Klient.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-29T20:41:14.337Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Win\\Administrator.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\vs\\WpfApp1\\WpfApp1\\win\\Administrator.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\win\\Administrator.xaml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\vs\\WpfApp1\\WpfApp1\\win\\Administrator.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\win\\Administrator.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACEAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T20:37:42.553Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Administrator.xaml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\vs\\WpfApp1\\WpfApp1\\Win\\Administrator.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Win\\Administrator.xaml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\vs\\WpfApp1\\WpfApp1\\Win\\Administrator.xaml",
+              "RelativeToolTip": "WpfApp1\\Win\\Administrator.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-29T20:16:25.052Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Win\\Avtorizaciya.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\vs\\WpfApp1\\WpfApp1\\win\\Avtorizaciya.xaml.cs",
+              "RelativeDocumentMoniker": "WpfApp1\\win\\Avtorizaciya.xaml.cs",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\vs\\WpfApp1\\WpfApp1\\win\\Avtorizaciya.xaml.cs",
+              "RelativeToolTip": "WpfApp1\\win\\Avtorizaciya.xaml.cs",
+              "ViewState": "AgIAABsAAAAAAAAAAAAywCkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-29T20:17:12.43Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Avtorizaciya.xaml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\vs\\WpfApp1\\WpfApp1\\Win\\Avtorizaciya.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\Win\\Avtorizaciya.xaml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\vs\\WpfApp1\\WpfApp1\\Win\\Avtorizaciya.xaml",
+              "RelativeToolTip": "WpfApp1\\Win\\Avtorizaciya.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-29T20:00:27.127Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "App.xaml",
+              "DocumentMoniker": "C:\\Users\\LENOVO\\Desktop\\vs\\WpfApp1\\WpfApp1\\App.xaml",
+              "RelativeDocumentMoniker": "WpfApp1\\App.xaml",
+              "ToolTip": "C:\\Users\\LENOVO\\Desktop\\vs\\WpfApp1\\WpfApp1\\App.xaml",
+              "RelativeToolTip": "WpfApp1\\App.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2026-06-29T19:57:37.075Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
